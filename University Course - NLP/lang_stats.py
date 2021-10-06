@@ -1,7 +1,7 @@
 # %% Import and downloads
 # %%
-from nltk.probability import FreqDist
 from nltk.tokenize import word_tokenize
+from nltk.probability import FreqDist
 from nltk.book import *
 import nltk
 texts()
@@ -75,11 +75,19 @@ fdist1.most_common(50)  # 50 most frequently occuring types in the text
 #  ('me', 627),
 #  ('like', 624)]
 
+# Generate cumulative frequency plot for the given amount of words
 fdist1.plot(50, cumulative=True)
 
-# Output as plot
+# Output:
+# cumulative frequency plot located at "plots/freq_dist.png"
 # %%
+
 sent = 'This is an example sentence'
 fdist = FreqDist()
 for word in word_tokenize(sent):
     fdist[word.lower()] += 1
+
+fdist1 = FreqDist(sent)
+fdist1.plot()
+
+# %%
