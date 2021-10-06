@@ -85,7 +85,7 @@ text2.common_contexts(["monstrous", "very"])
 text4.dispersion_plot(
     ["citizens", "democracy", "freedom", "duties", "America"])
 # Output
-# dispersion plot
+# dispersion plot located at plots/dispersion.png
 
 
 '''Counting Vocabulary'''
